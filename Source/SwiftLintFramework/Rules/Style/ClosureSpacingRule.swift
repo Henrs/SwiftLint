@@ -24,7 +24,7 @@ public struct ClosureSpacingRule: CorrectableRule, ConfigurationProviderRule, Op
     public static let description = RuleDescription(
         identifier: "closure_spacing",
         name: "Closure Spacing",
-        description: "Closure expressions should have a single space inside each brace.",
+        description: "在block中,每一个表达式之间应该有个空格.",
         kind: .style,
         nonTriggeringExamples: [
             Example("[].map ({ $0.description })"),

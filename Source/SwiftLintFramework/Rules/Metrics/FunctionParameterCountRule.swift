@@ -9,7 +9,7 @@ public struct FunctionParameterCountRule: ASTRule, ConfigurationProviderRule {
     public static let description = RuleDescription(
         identifier: "function_parameter_count",
         name: "Function Parameter Count",
-        description: "Number of function parameters should be low.",
+        description: "函数参数也不应该太多了.",
         kind: .metrics,
         nonTriggeringExamples: [
             Example("init(a: Int, b: Int, c: Int, d: Int, e: Int, f: Int) {}"),
@@ -68,8 +68,7 @@ public struct FunctionParameterCountRule: ASTRule, ConfigurationProviderRule {
 
         for parameter in configuration.severityConfiguration.params where parameterCount > parameter.value {
             let offset = dictionary.offset ?? 0
-            let reason = "Function should have \(configuration.severityConfiguration.warning) parameters or less: " +
-                         "it currently has \(parameterCount)"
+            let reason = "函数参数建议少于 \(configuration.severityConfiguration.warning)个, 当前参数: \(parameterCount)个,是不是太多了?"
             return [StyleViolation(ruleDescription: Self.description,
                                    severity: parameter.severity,
                                    location: Location(file: file, byteOffset: offset),

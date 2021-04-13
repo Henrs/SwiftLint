@@ -9,7 +9,7 @@ public struct ClosureEndIndentationRule: Rule, OptInRule, ConfigurationProviderR
     public static let description = RuleDescription(
         identifier: "closure_end_indentation",
         name: "Closure End Indentation",
-        description: "Closure end should have the same indentation as the line that started it.",
+        description: "注意大括号的缩进,它应该与开始的那一行的缩进相同,可以使用快速格式化试着修复这个警告.",
         kind: .style,
         nonTriggeringExamples: ClosureEndIndentationRuleExamples.nonTriggeringExamples,
         triggeringExamples: ClosureEndIndentationRuleExamples.triggeringExamples,

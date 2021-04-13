@@ -18,7 +18,7 @@ public struct LargeTupleRule: ASTRule, ConfigurationProviderRule, AutomaticTesta
     public static let description = RuleDescription(
         identifier: "large_tuple",
         name: "Large Tuple",
-        description: "Tuples shouldn't have too many members. Create a custom type instead.",
+        description: "元组不应有太多成员。创建一个自定义类型.",
         kind: .metrics,
         nonTriggeringExamples: [
             Example("let foo: (Int, Int)\n"),
@@ -61,7 +61,7 @@ public struct LargeTupleRule: ASTRule, ConfigurationProviderRule, AutomaticTesta
 
         return offsets.compactMap { location, size in
             for parameter in configuration.params where size > parameter.value {
-                let reason = "Tuples should have at most \(configuration.warning) members."
+                let reason = "元组最多 \(configuration.warning) 个成员.不要太多了"
                 return StyleViolation(ruleDescription: Self.description,
                                       severity: parameter.severity,
                                       location: Location(file: file, byteOffset: location),

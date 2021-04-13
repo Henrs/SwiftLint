@@ -10,8 +10,7 @@ public struct ControlStatementRule: ConfigurationProviderRule, AutomaticTestable
         identifier: "control_statement",
         name: "Control Statement",
         description:
-            "`if`, `for`, `guard`, `switch`, `while`, and `catch` statements shouldn't unnecessarily wrap their " +
-            "conditionals or arguments in parentheses.",
+            "`if`, `for`, `guard`, `switch`, `while`, and `catch` 的条件请尽量不要写在()中,这是swift,不是oc/c",
         kind: .style,
         nonTriggeringExamples: [
             Example("if condition {\n"),

@@ -13,7 +13,7 @@ public struct LineLengthRule: ConfigurationProviderRule {
     public static let description = RuleDescription(
         identifier: "line_length",
         name: "Line Length",
-        description: "Lines should not span too many characters.",
+        description: "一行代码不要太长了.",
         kind: .metrics,
         nonTriggeringExamples: [
             Example(String(repeating: "/", count: 120) + "\n"),
@@ -76,7 +76,7 @@ public struct LineLengthRule: ConfigurationProviderRule {
             let length = strippedString.count
 
             for param in configuration.params where length > param.value {
-                let reason = "Line should be \(param.value) characters or less: currently \(length) characters"
+                let reason = "一行代码应该少于 \(param.value) 个字符,当前已经 \(length) 个"
                 return StyleViolation(ruleDescription: Self.description,
                                       severity: param.severity,
                                       location: Location(file: file.path, line: line.index),

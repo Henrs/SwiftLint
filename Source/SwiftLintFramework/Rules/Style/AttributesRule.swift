@@ -17,8 +17,7 @@ public struct AttributesRule: ASTRule, OptInRule, ConfigurationProviderRule {
     public static let description = RuleDescription(
         identifier: "attributes",
         name: "Attributes",
-        description: "Attributes should be on their own lines in functions and types, " +
-                     "but on the same line as variables and imports.",
+        description: "属性应该在他们自己的行上,定义一个属性不要换成几行,没有必要,看着很乱 ",
         kind: .style,
         nonTriggeringExamples: AttributesRuleExamples.nonTriggeringExamples,
         triggeringExamples: AttributesRuleExamples.triggeringExamples

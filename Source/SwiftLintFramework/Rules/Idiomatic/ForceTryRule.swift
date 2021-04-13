@@ -8,7 +8,7 @@ public struct ForceTryRule: ConfigurationProviderRule, AutomaticTestableRule {
     public static let description = RuleDescription(
         identifier: "force_try",
         name: "Force Try",
-        description: "Force tries should be avoided.",
+        description: "请不要强制try,请不要强制try,请不要强制try!!!",
         kind: .idiomatic,
         nonTriggeringExamples: [
             Example("""

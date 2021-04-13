@@ -8,7 +8,7 @@ public struct ClosureBodyLengthRule: OptInRule, ASTRule, ConfigurationProviderRu
     public static let description = RuleDescription(
         identifier: "closure_body_length",
         name: "Closure Body Length",
-        description: "Closure bodies should not span too many lines.",
+        description: "闭包主体不应该有太多的行.",
         kind: .metrics,
         minSwiftVersion: .fourDotTwo,
         nonTriggeringExamples: ClosureBodyLengthRuleExamples.nonTriggeringExamples,
@@ -38,8 +38,8 @@ public struct ClosureBodyLengthRule: OptInRule, ASTRule, ConfigurationProviderRu
 
             guard exceeds else { return nil }
 
-            let reason = "Closure body should span \(configuration.warning) lines or less "
-                + "excluding comments and whitespace: currently spans \(lineCount) lines"
+            let reason = "闭包主题的行数最好少于 \(configuration.warning) 行,这其中不包含注释和空格"
+                + "当前行数: \(lineCount) 行"
 
             return StyleViolation(ruleDescription: Self.description,
                                   severity: parameter.severity,

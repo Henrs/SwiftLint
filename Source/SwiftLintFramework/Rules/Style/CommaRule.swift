@@ -9,7 +9,7 @@ public struct CommaRule: SubstitutionCorrectableRule, ConfigurationProviderRule,
     public static let description = RuleDescription(
         identifier: "comma",
         name: "Comma Spacing",
-        description: "There should be no space before and one after any comma.",
+        description: "逗号前面不应该有任何空格.",
         kind: .style,
         nonTriggeringExamples: [
             Example("func abc(a: String, b: String) { }"),

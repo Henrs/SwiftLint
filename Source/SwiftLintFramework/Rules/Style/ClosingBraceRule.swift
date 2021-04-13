@@ -9,8 +9,7 @@ public struct ClosingBraceRule: SubstitutionCorrectableRule, ConfigurationProvid
     public static let description = RuleDescription(
         identifier: "closing_brace",
         name: "Closing Brace Spacing",
-        description: "Closing brace with closing parenthesis " +
-                     "should not have any whitespaces in the middle.",
+        description: "大括号之间不要有任何空格",
         kind: .style,
         nonTriggeringExamples: [
             Example("[].map({ })"),

@@ -9,7 +9,7 @@ public struct EmptyParametersRule: ConfigurationProviderRule, SubstitutionCorrec
     public static let description = RuleDescription(
         identifier: "empty_parameters",
         name: "Empty Parameters",
-        description: "Prefer `() -> ` over `Void -> `.",
+        description: "`() -> ` 比 `Void -> `更好一点.",
         kind: .style,
         nonTriggeringExamples: [
             Example("let abc: () -> Void = {}\n"),

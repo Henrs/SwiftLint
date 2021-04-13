@@ -12,7 +12,7 @@ public struct NestingRule: ConfigurationProviderRule {
         identifier: "nesting",
         name: "Nesting",
         description:
-            "Types should be nested at most 1 level deep, and functions should be nested at most 2 levels deep.",
+            "类型最多应嵌套1层深度，功能应最多嵌套2层深度.",
         kind: .metrics,
         nonTriggeringExamples: NestingRuleExamples.nonTriggeringExamples,
         triggeringExamples: NestingRuleExamples.triggeringExamples
@@ -125,7 +125,7 @@ public struct NestingRule: ConfigurationProviderRule {
             ruleDescription: Self.description,
             severity: severity,
             location: Location(file: file, byteOffset: offset),
-            reason: "\(targetName) should be nested at most \(threshold) level\(pluralSuffix) deep"
+            reason: "\(targetName) 最多嵌套 \(threshold) \(pluralSuffix) 级深度,不要嵌套太多了啊,难得看"
         )
     }
 }

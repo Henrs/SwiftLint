@@ -10,8 +10,7 @@ public struct EmptyParenthesesWithTrailingClosureRule: SubstitutionCorrectableAS
     public static let description = RuleDescription(
         identifier: "empty_parentheses_with_trailing_closure",
         name: "Empty Parentheses with Trailing Closure",
-        description: "When using trailing closures, empty parentheses should be avoided " +
-                     "after the method call.",
+        description: "使用尾随闭包时，应在方法调用后避免使用空括号,这个括号可以省略.",
         kind: .style,
         nonTriggeringExamples: [
             Example("[1, 2].map { $0 + 1 }\n"),

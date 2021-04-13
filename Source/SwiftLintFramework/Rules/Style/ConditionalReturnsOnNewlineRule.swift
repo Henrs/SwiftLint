@@ -9,7 +9,7 @@ public struct ConditionalReturnsOnNewlineRule: ConfigurationProviderRule, Rule, 
     public static let description = RuleDescription(
         identifier: "conditional_returns_on_newline",
         name: "Conditional Returns on Newline",
-        description: "Conditional statements should always return on the next line",
+        description: "请在新的一行return,不要与条件卸载一行",
         kind: .style,
         nonTriggeringExamples: [
             Example("guard true else {\n return true\n}"),

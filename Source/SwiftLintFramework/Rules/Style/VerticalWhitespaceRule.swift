@@ -1,7 +1,7 @@
 import Foundation
 import SourceKittenFramework
 
-private let defaultDescriptionReason = "Limit vertical whitespace to a single empty line."
+private let defaultDescriptionReason = "分割行最多一行就够了,不要太多了."
 
 public struct VerticalWhitespaceRule: CorrectableRule, ConfigurationProviderRule {
     public var configuration = VerticalWhitespaceConfiguration(maxEmptyLines: 1)
@@ -33,7 +33,7 @@ public struct VerticalWhitespaceRule: CorrectableRule, ConfigurationProviderRule
 
     private var configuredDescriptionReason: String {
         guard configuration.maxEmptyLines == 1 else {
-            return "Limit vertical whitespace to maximum \(configuration.maxEmptyLines) empty lines."
+            return "分割行最多 \(configuration.maxEmptyLines) 行就够了."
         }
         return defaultDescriptionReason
     }
@@ -49,7 +49,7 @@ public struct VerticalWhitespaceRule: CorrectableRule, ConfigurationProviderRule
                 ruleDescription: Self.description,
                 severity: configuration.severityConfiguration.severity,
                 location: Location(file: file.path, line: eachLastLine.index),
-                reason: configuredDescriptionReason + " Currently \(eachSectionCount + 1)."
+                reason: configuredDescriptionReason + " 现在都 \(eachSectionCount + 1)行了,多余的空白行删了吧."
             )
         }
     }

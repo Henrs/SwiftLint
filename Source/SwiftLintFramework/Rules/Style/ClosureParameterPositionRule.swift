@@ -9,7 +9,7 @@ public struct ClosureParameterPositionRule: ASTRule, ConfigurationProviderRule, 
     public static let description = RuleDescription(
         identifier: "closure_parameter_position",
         name: "Closure Parameter Position",
-        description: "Closure parameters should be on the same line as opening brace.",
+        description: "闭包的参数应该和闭包在同一行,请注意代码格式问题.",
         kind: .style,
         nonTriggeringExamples: [
             Example("[1, 2].map { $0 + 1 }\n"),

@@ -8,7 +8,7 @@ public struct FileLengthRule: ConfigurationProviderRule {
     public static let description = RuleDescription(
         identifier: "file_length",
         name: "File Length",
-        description: "Files should not span too many lines.",
+        description: "一个文件最好也不要太长了.",
         kind: .metrics,
         nonTriggeringExamples: [
             Example(repeatElement("print(\"swiftlint\")\n", count: 400).joined())
@@ -38,8 +38,8 @@ public struct FileLengthRule: ConfigurationProviderRule {
         }
 
         for parameter in configuration.severityConfiguration.params where lineCount > parameter.value {
-            let reason = "File should contain \(configuration.severityConfiguration.warning) lines or less: " +
-                         "currently contains \(lineCount)"
+            let reason = "一个文件最好不要超过 \(configuration.severityConfiguration.warning) 行代码" +
+                         "当前 \(lineCount)行,是不是可以分成多个文件? 多个类?"
             return [StyleViolation(ruleDescription: Self.description,
                                    severity: parameter.severity,
                                    location: Location(file: file.path, line: lineCount),

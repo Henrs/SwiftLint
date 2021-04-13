@@ -20,7 +20,7 @@ public struct TypeBodyLengthRule: ASTRule, ConfigurationProviderRule, AutomaticT
     public static let description = RuleDescription(
         identifier: "type_body_length",
         name: "Type Body Length",
-        description: "Type bodies should not span too many lines.",
+        description: "类型主体也不要有太多行了.",
         kind: .metrics,
         nonTriggeringExamples: ["class", "struct", "enum"].flatMap({ type in
             [
@@ -53,8 +53,7 @@ public struct TypeBodyLengthRule: ASTRule, ConfigurationProviderRule, AutomaticT
                         startLine, endLine, parameter.value
                     )
                     if exceeds {
-                        let reason = "Type body should span \(configuration.warning) lines or less " +
-                            "excluding comments and whitespace: currently spans \(lineCount) lines"
+                        let reason = "类型主题最多 \(configuration.warning) 行,不包括空白和换行,当前: \(lineCount) 行"
                         return [StyleViolation(ruleDescription: Self.description,
                                                severity: parameter.severity,
                                                location: Location(file: file, byteOffset: offset),

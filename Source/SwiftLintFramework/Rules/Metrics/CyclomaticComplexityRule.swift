@@ -9,7 +9,7 @@ public struct CyclomaticComplexityRule: ASTRule, ConfigurationProviderRule {
     public static let description = RuleDescription(
         identifier: "cyclomatic_complexity",
         name: "Cyclomatic Complexity",
-        description: "Complexity of function bodies should be limited.",
+        description: "函数主体不应该太过于复杂了.",
         kind: .metrics,
         nonTriggeringExamples: [
             Example("""
@@ -82,8 +82,8 @@ public struct CyclomaticComplexityRule: ASTRule, ConfigurationProviderRule {
 
         for parameter in configuration.params where complexity > parameter.value {
             let offset = dictionary.offset ?? 0
-            let reason = "Function should have complexity \(configuration.length.warning) or less: " +
-                         "currently complexity equals \(complexity)"
+            let reason = "方法的复杂度应该少于 \(configuration.length.warning) " +
+                         "当前复杂度: \(complexity)"
             return [StyleViolation(ruleDescription: Self.description,
                                    severity: parameter.severity,
                                    location: Location(file: file, byteOffset: offset),

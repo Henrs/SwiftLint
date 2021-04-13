@@ -8,7 +8,7 @@ public struct ForceCastRule: ConfigurationProviderRule, AutomaticTestableRule {
     public static let description = RuleDescription(
         identifier: "force_cast",
         name: "Force Cast",
-        description: "Force casts should be avoided.",
+        description: "请不要强制解包,请不要强制解包,请不要强制解包!!!,除非你做了明确的空值判断.",
         kind: .idiomatic,
         nonTriggeringExamples: [
             Example("NSNumber() as? Int\n")

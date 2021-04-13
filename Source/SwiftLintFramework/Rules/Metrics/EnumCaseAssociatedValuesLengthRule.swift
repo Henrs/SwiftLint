@@ -8,7 +8,7 @@ public struct EnumCaseAssociatedValuesLengthRule: ASTRule, OptInRule, Configurat
     public static let description = RuleDescription(
         identifier: "enum_case_associated_values_count",
         name: "Enum Case Associated Values Count",
-        description: "Number of associated values in an enum case should be low",
+        description: "枚举的关联属性应该尽可能的少",
         kind: .metrics,
         nonTriggeringExamples: [
             Example("""
@@ -64,9 +64,8 @@ public struct EnumCaseAssociatedValuesLengthRule: ASTRule, OptInRule, Configurat
                 violationSeverity = .warning
             }
 
-            let reason = "Enum case \(caseNameWithoutParams) should contain "
-                + "less than \(configuration.warning) associated values: "
-                + "currently contains \(enumCaseAssociatedValueCount)"
+            let reason = "枚举属性 \(caseNameWithoutParams) 最好最多关联\(configuration.warning)个属性"
+                + "当前已关联: \(enumCaseAssociatedValueCount),太多了建议拆分或者考虑下自己的逻辑是不是由问题"
             violations.append(
                 StyleViolation(
                     ruleDescription: Self.description,

@@ -8,7 +8,7 @@ public struct FunctionBodyLengthRule: ASTRule, ConfigurationProviderRule {
     public static let description = RuleDescription(
         identifier: "function_body_length",
         name: "Function Body Length",
-        description: "Functions bodies should not span too many lines.",
+        description: "函数主体最好不要太长了.",
         kind: .metrics
     )
 
@@ -28,8 +28,7 @@ public struct FunctionBodyLengthRule: ASTRule, ConfigurationProviderRule {
                     ruleDescription: Self.description, severity: parameter.severity,
                     location: Location(file: file, byteOffset: input.offset),
                     reason: """
-                        Function body should span \(configuration.warning) lines or less excluding comments and \
-                        whitespace: currently spans \(lineCount) lines
+                        函数主题最好不要超过 \(configuration.warning) 行,不包括空白和换行,当前:\(lineCount) 行,要不要考虑拆分方法
                         """
                 )
             ]

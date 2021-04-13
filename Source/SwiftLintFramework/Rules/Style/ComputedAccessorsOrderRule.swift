@@ -9,7 +9,7 @@ public struct ComputedAccessorsOrderRule: ConfigurationProviderRule {
     public static let description = RuleDescription(
         identifier: "computed_accessors_order",
         name: "Computed Accessors Order",
-        description: "Getter and setters in computed properties and subscripts should be in a consistent order.",
+        description: "计算属性的set get 等各种方法应该对齐,注意代码风格.",
         kind: .style,
         minSwiftVersion: .fourDotOne,
         nonTriggeringExamples: ComputedAccessorsOrderRuleExamples.nonTriggeringExamples,

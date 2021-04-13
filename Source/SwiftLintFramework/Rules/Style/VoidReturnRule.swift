@@ -9,7 +9,7 @@ public struct VoidReturnRule: ConfigurationProviderRule, SubstitutionCorrectable
     public static let description = RuleDescription(
         identifier: "void_return",
         name: "Void Return",
-        description: "Prefer `-> Void` over `-> ()`.",
+        description: "`-> Void` 比 `-> ()`要更好一点吧.",
         kind: .style,
         nonTriggeringExamples: [
             Example("let abc: () -> Void = {}\n"),

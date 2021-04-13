@@ -15,8 +15,7 @@ public struct ColonRule: CorrectableRule, ConfigurationProviderRule {
     public static let description = RuleDescription(
         identifier: "colon",
         name: "Colon",
-        description: "Colons should be next to the identifier when specifying a type " +
-                     "and next to the key in dictionary literals.",
+        description: "冒号应该在标识符的旁边,如果是字典,它应该在key(键)的旁边",
         kind: .style,
         nonTriggeringExamples: ColonRuleExamples.nonTriggeringExamples,
         triggeringExamples: ColonRuleExamples.triggeringExamples,

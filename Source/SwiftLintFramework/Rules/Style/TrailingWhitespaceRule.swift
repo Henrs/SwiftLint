@@ -10,7 +10,7 @@ public struct TrailingWhitespaceRule: CorrectableRule, ConfigurationProviderRule
     public static let description = RuleDescription(
         identifier: "trailing_whitespace",
         name: "Trailing Whitespace",
-        description: "Lines should not have trailing whitespace.",
+        description: "每一行的结尾不应该有尾随的空格.",
         kind: .style,
         nonTriggeringExamples: [
             Example("let name: String\n"), Example("//\n"), Example("// \n"),

@@ -69,8 +69,7 @@ public struct OpeningBraceRule: CorrectableRule, ConfigurationProviderRule {
     public static let description = RuleDescription(
         identifier: "opening_brace",
         name: "Opening Brace Spacing",
-        description: "Opening braces should be preceded by a single space and on the same line " +
-                     "as the declaration.",
+        description: "左括号之前应该有个空格,并且与声明在同一行,不要像c一样换行了",
         kind: .style,
         nonTriggeringExamples: [
             Example("func abc() {\n}"),
