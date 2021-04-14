@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name                = 'SwiftLintFramework'
   s.version             = `make get_version`
   s.summary             = 'A tool to enforce Swift style and conventions.'
-  s.homepage            = 'https://github.com/realm/SwiftLint'
+  s.homepage            = 'https://github.com/Henrs/SwiftLint'
   s.source              = { git: s.homepage + '.git', tag: s.version }
   s.license             = { type: 'MIT', file: 'LICENSE' }
   s.author              = { 'JP Simard' => 'jp@jpsim.com' }
